@@ -35,7 +35,6 @@
     .brand-name { font-weight: 800; font-size: 1.1rem; color: var(--primary); line-height: 1; letter-spacing: -0.5px; }
     .brand-sub { font-size: 0.65rem; color: var(--text-light); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
     
-    /* Hamburger Menu for Mobile */
     .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 5px; }
     .menu-toggle span { display: block; width: 25px; height: 3px; background: var(--primary); margin: 5px 0; transition: 0.3s; }
 
@@ -67,9 +66,9 @@
 
     .full-width-section { background: var(--bg-light); border-radius: 40px; padding: 60px 24px; margin-top: 50px; text-align: center; }
 
-    /* --- Footer --- */
-    .site-footer { background: var(--footer-bg); color: #94a3b8; padding: 80px 0 0; border-top: 4px solid var(--accent); }
-    .footer-main { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 60px; }
+    /* --- Footer (Updated to Match About) --- */
+    .site-footer { background: var(--footer-bg); color: #94a3b8; padding: 100px 0 0; border-top: 4px solid var(--accent); }
+    .footer-main { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 80px; }
     .footer-brand-info img { height: 60px; width: auto; object-fit: contain; margin-bottom: 25px; display: block; }
     .footer-brand-info p { font-size: 0.95rem; line-height: 1.8; max-width: 320px; }
     .footer-title { color: #ffffff; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; margin-bottom: 30px; position: relative; }
@@ -77,6 +76,7 @@
     .footer-links a { display: block; color: #94a3b8; text-decoration: none; margin-bottom: 15px; font-size: 0.95rem; transition: var(--transition); width: fit-content; }
     .footer-links a:hover { color: var(--white); transform: translateX(8px); }
     .footer-contact b { color: #fff; display: block; font-size: 0.9rem; margin-bottom: 5px; margin-top: 15px; }
+    .footer-contact span { display: block; }
     .social-wrapper { margin-top: 25px; display: flex; gap: 15px; }
     .social-btn { width: 40px; height: 40px; background: rgba(255,255,255,0.05); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; transition: var(--transition); }
     .social-btn svg { width: 20px; height: 20px; fill: currentColor; }
@@ -84,7 +84,7 @@
     .bottom-inner { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
     .scroll-top { background: none; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 8px 18px; border-radius: 50px; cursor: pointer; font-size: 0.7rem; font-weight: 700; transition: var(--transition); }
 
-    /* --- RESPONSIVE MOBILE FIXES --- */
+    /* --- RESPONSIVE MOBILE --- */
     @media (max-width: 992px) {
       .menu-toggle { display: block; }
       .site-nav { 
@@ -94,24 +94,14 @@
       }
       .site-nav.active { left: 0; }
       .site-nav .btn { width: 100%; margin-top: 20px; }
-      
       .vimi-container { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-      .footer-main { grid-template-columns: 1fr; text-align: center; }
-      .footer-brand-info p { margin: 0 auto; }
-      .footer-brand-info img { margin: 0 auto 25px; }
-      .footer-title::after { left: 50%; transform: translateX(-50%); }
-      .footer-links a { margin: 0 auto 15px; }
-      .social-wrapper { justify-content: center; }
+      .footer-main { grid-template-columns: 1fr; }
       .bottom-inner { flex-direction: column; gap: 20px; text-align: center; }
     }
 
     @media (max-width: 600px) {
       .vimi-container { grid-template-columns: 1fr; }
-      .brand-name { font-size: 0.9rem; }
-      .brand-sub { font-size: 0.55rem; }
-      .section { padding: 60px 0; }
       h1 { font-size: 1.8rem; }
-      .full-width-section { border-radius: 20px; padding: 40px 20px; }
     }
   </style>
 </head>
@@ -183,7 +173,7 @@
           </div>
 
           <div class="vimi-card">
-            <img src="https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&w=800&q=80" alt="UI/UX" class="service-img">
+            <img src="https://i.pinimg.com/736x/58/da/10/58da1028158d87184cb237204f98f1f2.jpg" alt="UI/UX" class="service-img">
             <h3>UI/UX Design</h3>
             <p>Merancang antarmuka pengguna yang intuitif untuk pengalaman navigasi yang lebih baik.</p>
             <div class="list-item">User Research & Persona</div>
@@ -242,7 +232,7 @@
           <a href="about.html">About Us</a>
           <a href="services.html">Services</a>
           <a href="products.html">Products</a>
-          <a href="contact.html">Contact</a>
+          <a href="contact.html">Contact</a>  
         </div>
 
         <div class="footer-contact">
@@ -269,7 +259,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Script for Mobile Menu Toggle
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
 
@@ -277,7 +266,6 @@
       navMenu.classList.toggle('active');
     });
 
-    // Close menu when link is clicked
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
