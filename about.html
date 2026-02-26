@@ -86,8 +86,10 @@
     .social-btn { width: 40px; height: 40px; background: rgba(255,255,255,0.05); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; transition: var(--transition); }
     .social-btn svg { width: 20px; height: 20px; fill: currentColor; }
     .social-btn:hover { background: var(--accent); transform: translateY(-5px); }
+    
     .footer-bottom { background: #070b16; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.05); }
-    .bottom-inner { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
+    /* BAGIAN YANG DIUBAH KE TENGAH */
+    .bottom-inner { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; font-size: 0.85rem; text-align: center; }
     .scroll-top { background: none; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 8px 18px; border-radius: 50px; cursor: pointer; font-size: 0.7rem; font-weight: 700; transition: var(--transition); }
 
     /* --- RESPONSIVE MOBILE OPTIMIZATION --- */
@@ -110,7 +112,6 @@
       .footer-title::after { left: 50%; transform: translateX(-50%); }
       .footer-links a { margin: 0 auto 15px; }
       .social-wrapper { justify-content: center; }
-      .bottom-inner { flex-direction: column; gap: 20px; }
     }
 
     @media (max-width: 480px) {
@@ -262,7 +263,7 @@
 
     <div class="footer-bottom">
       <div class="container bottom-inner">
-        <p>&copy; <span id="year"></span> PT Idemu Sistem Sinergi. Seluruh Hak Cipta Dilindungi.</p>
+        <p>&copy; 2026 PT Idemu Sistem Sinergi. Seluruh Hak Cipta Dilindungi.</p>
         <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
           ↑ Kembali Ke Atas
         </button>
@@ -271,8 +272,6 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
     // Menu Mobile Toggle
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
