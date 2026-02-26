@@ -34,43 +34,47 @@
     .brand-text { display: flex; flex-direction: column; }
     .brand-name { font-weight: 800; font-size: 1.1rem; color: var(--primary); line-height: 1; letter-spacing: -0.5px; }
     .brand-sub { font-size: 0.65rem; color: var(--text-light); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+    
+    /* Hamburger Menu */
+    .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 5px; }
+    .menu-toggle span { display: block; width: 25px; height: 3px; background: var(--primary); margin: 5px 0; transition: 0.3s; }
+
     .site-nav { display: flex; align-items: center; gap: 25px; }
     .nav-link { font-weight: 600; font-size: 0.9rem; color: var(--text-light); text-decoration: none; transition: var(--transition); }
     .nav-link:hover, .nav-link.active { color: var(--primary); }
-    .btn { display: inline-flex; align-items: center; padding: 12px 28px; font-weight: 700; border-radius: 8px; cursor: pointer; border: none; transition: var(--transition); text-decoration: none; gap: 8px; font-size: 0.9rem; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 28px; font-weight: 700; border-radius: 8px; cursor: pointer; border: none; transition: var(--transition); text-decoration: none; gap: 8px; font-size: 0.9rem; }
     .btn-primary { background: var(--primary); color: var(--white); }
 
-    /* --- Page Hero (UBAH KE CENTER) --- */
-    .page-hero { padding: clamp(80px, 10vw, 120px) 0; background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%); position: relative; border-bottom: 1px solid var(--border); text-align: center; }
+    /* --- Page Hero --- */
+    .page-hero { padding: clamp(60px, 10vw, 120px) 0; background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%); position: relative; border-bottom: 1px solid var(--border); text-align: center; }
     .kicker { text-transform: uppercase; letter-spacing: 2px; font-weight: 800; color: var(--accent); font-size: 0.75rem; margin-bottom: 1.5rem; display: block; }
-    h1 { font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 800; color: var(--dark); letter-spacing: -2px; line-height: 1.2; margin-bottom: 25px; margin-left: auto; margin-right: auto; max-width: 900px; }
-    .hero-lead { max-width: 750px; font-size: 1.15rem; color: var(--text-light); line-height: 1.7; margin-left: auto; margin-right: auto; }
+    h1 { font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 800; color: var(--dark); letter-spacing: -1px; line-height: 1.2; margin-bottom: 25px; margin-left: auto; margin-right: auto; max-width: 900px; }
+    .hero-lead { max-width: 750px; font-size: clamp(1rem, 2vw, 1.15rem); color: var(--text-light); line-height: 1.7; margin-left: auto; margin-right: auto; }
 
     /* --- Section Styling --- */
-    .section { padding: 100px 0; }
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .section { padding: clamp(50px, 8vw, 100px) 0; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 80px; align-items: center; }
     .about-img-frame { position: relative; }
     .about-img-frame img { width: 100%; border-radius: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
-    .experience-badge { position: absolute; bottom: -30px; right: -30px; background: var(--primary); color: white; padding: 30px; border-radius: 20px; text-align: center; }
-    .experience-badge h3 { font-size: 2.5rem; line-height: 1; }
-    .experience-badge p { font-size: 0.8rem; text-transform: uppercase; font-weight: 700; opacity: 0.8; }
+    .experience-badge { position: absolute; bottom: -30px; right: -30px; background: var(--primary); color: white; padding: 25px; border-radius: 20px; text-align: center; min-width: 140px; }
+    .experience-badge h3 { font-size: 2.2rem; line-height: 1; }
+    .experience-badge p { font-size: 0.75rem; text-transform: uppercase; font-weight: 700; opacity: 0.8; }
+    
     .vimi-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 60px; }
-    .vimi-card { padding: 50px; background: var(--white); border: 1px solid var(--border); border-radius: 30px; transition: var(--transition); }
+    .vimi-card { padding: clamp(30px, 5vw, 50px); background: var(--white); border: 1px solid var(--border); border-radius: 30px; transition: var(--transition); }
     .vimi-card:hover { border-color: var(--accent); transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-    .vimi-card h3 { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 20px; }
+    .vimi-card h3 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: var(--primary); margin-bottom: 20px; }
     .vimi-card p { font-size: 1.1rem; color: var(--text-light); }
+    
     .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
     .value-item { padding: 40px; background: var(--bg-light); border-radius: 24px; text-align: center; }
     .value-item .icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
     .value-item h4 { font-size: 1.3rem; font-weight: 800; margin-bottom: 15px; color: var(--dark); }
 
     /* --- Footer --- */
-    .site-footer { background: var(--footer-bg); color: #94a3b8; padding: 100px 0 0; border-top: 4px solid var(--accent); }
-    .footer-main { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 80px; }
-    
-    /* FIX LOGO FOOTER: HAPUS FILTER AGAR GAMBAR ASLI MUNCUL */
+    .site-footer { background: var(--footer-bg); color: #94a3b8; padding: 80px 0 0; border-top: 4px solid var(--accent); }
+    .footer-main { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 60px; }
     .footer-brand-info img { height: 60px; width: auto; object-fit: contain; margin-bottom: 25px; display: block; }
-
     .footer-brand-info p { font-size: 0.95rem; line-height: 1.8; max-width: 320px; }
     .footer-title { color: #ffffff; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; margin-bottom: 30px; position: relative; }
     .footer-title::after { content: ''; position: absolute; left: 0; bottom: -10px; width: 30px; height: 2px; background: var(--accent); }
@@ -86,9 +90,34 @@
     .bottom-inner { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
     .scroll-top { background: none; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 8px 18px; border-radius: 50px; cursor: pointer; font-size: 0.7rem; font-weight: 700; transition: var(--transition); }
 
+    /* --- RESPONSIVE MOBILE OPTIMIZATION --- */
     @media (max-width: 992px) {
-      .grid-2, .vimi-container, .values-grid, .footer-main { grid-template-columns: 1fr; }
-      .experience-badge { position: static; margin-top: 20px; }
+      .menu-toggle { display: block; }
+      .site-nav { 
+        position: fixed; top: 72px; left: -100%; width: 100%; height: calc(100vh - 72px); 
+        background: white; flex-direction: column; padding: 40px 24px; transition: 0.4s; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1); align-items: flex-start; z-index: 1000;
+      }
+      .site-nav.active { left: 0; }
+      .site-nav .btn { width: 100%; margin-top: 20px; }
+
+      .grid-2 { grid-template-columns: 1fr; gap: 60px; text-align: center; }
+      .experience-badge { position: relative; bottom: 0; right: 0; margin: -50px auto 0; width: fit-content; }
+      .vimi-container { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+      .footer-main { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+      .footer-brand-info p { max-width: 100%; }
+      .footer-title::after { left: 50%; transform: translateX(-50%); }
+      .footer-links a { margin: 0 auto 15px; }
+      .social-wrapper { justify-content: center; }
+      .bottom-inner { flex-direction: column; gap: 20px; }
+    }
+
+    @media (max-width: 480px) {
+      .brand-name { font-size: 0.95rem; }
+      .brand-sub { font-size: 0.55rem; }
+      .experience-badge { padding: 20px; }
+      .experience-badge h3 { font-size: 1.8rem; }
     }
   </style>
 </head>
@@ -103,7 +132,14 @@
           <span class="brand-sub">Digital Evolution Partner</span>
         </div>
       </a>
-      <nav class="site-nav">
+      
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="navMenu">
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link active" href="about.html">About</a>
         <a class="nav-link" href="services.html">Services</a>
@@ -136,7 +172,9 @@
             <span class="kicker">Our Journey</span>
             <h2>Lebih dari Sekadar Vendor IT, Kami Adalah Mitra Strategis.</h2>
             <p>Berawal dari tim kecil yang terobsesi dengan efisiensi kode, Idemu telah berkembang menjadi entitas teknologi yang dipercaya oleh berbagai perusahaan mulai dari UKM berkembang hingga korporasi multinasional.</p>
+            <br>
             <p>Kami memahami bahwa teknologi bukan hanya soal baris kode, tapi soal bagaimana teknologi tersebut bisa memecahkan masalah operasional, meningkatkan pendapatan, dan memberikan kenyamanan bagi pengguna akhir.</p>
+            <br>
             <p>Filosofi kami sederhana: **"Sinergi Tanpa Batas"**. Kami bekerja berdampingan dengan klien kami untuk memahami visi mereka dan menerjemahkannya ke dalam solusi digital yang tangguh.</p>
           </div>
         </div>
@@ -204,10 +242,11 @@
 
         <div class="footer-links">
           <h4 class="footer-title">Perusahaan</h4>
-          <a href="index.html">Beranda</a>
-          <a href="about.html">Tentang Kami</a>
-          <a href="services.html">Layanan</a>
-          <a href="products.html">Produk Digital</a>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="products.html">Products</a>
+          <a href="contact.html">Contact</a>
         </div>
 
         <div class="footer-contact">
@@ -225,7 +264,7 @@
       <div class="container bottom-inner">
         <p>&copy; <span id="year"></span> PT Idemu Sistem Sinergi. Seluruh Hak Cipta Dilindungi.</p>
         <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-          ↑ KEMBALI KE ATAS
+          ↑ Kembali Ke Atas
         </button>
       </div>
     </div>
@@ -233,6 +272,21 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Menu Mobile Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Close menu when link is clicked
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+      });
+    });
   </script>
 </body>
 </html>
