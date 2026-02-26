@@ -36,35 +36,39 @@
     .brand-name { font-weight: 800; font-size: 1.1rem; color: var(--primary); line-height: 1; letter-spacing: -0.5px; }
     .brand-sub { font-size: 0.65rem; color: var(--text-light); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
 
+    /* Hamburger Menu */
+    .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 5px; }
+    .menu-toggle span { display: block; width: 25px; height: 3px; background: var(--primary); margin: 5px 0; transition: 0.3s; }
+
     .site-nav { display: flex; align-items: center; gap: 25px; }
     .nav-link { font-weight: 600; font-size: 0.9rem; color: var(--text-light); text-decoration: none; transition: var(--transition); }
     .nav-link:hover, .nav-link.active { color: var(--primary); }
 
     /* --- Buttons --- */
-    .btn { display: inline-flex; align-items: center; padding: 12px 28px; font-weight: 700; border-radius: 8px; cursor: pointer; border: none; transition: var(--transition); text-decoration: none; gap: 8px; font-size: 0.9rem; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 28px; font-weight: 700; border-radius: 8px; cursor: pointer; border: none; transition: var(--transition); text-decoration: none; gap: 8px; font-size: 0.9rem; }
     .btn-primary { background: var(--primary); color: var(--white); }
     .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(30, 58, 138, 0.2); }
     .btn-ghost { border: 2px solid var(--border); color: var(--primary); background: transparent; }
     .btn-ghost:hover { background: var(--bg-light); border-color: var(--primary); }
 
     /* --- Hero Section --- */
-    .hero { padding: clamp(80px, 10vw, 120px) 0; background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%); position: relative; }
-    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
+    .hero { padding: clamp(60px, 10vw, 120px) 0; background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%); position: relative; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
     .kicker { text-transform: uppercase; letter-spacing: 2px; font-weight: 800; color: var(--accent); font-size: 0.75rem; margin-bottom: 1.5rem; display: block; }
-    h1 { font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; color: var(--dark); letter-spacing: -2px; }
-    .lead { font-size: 1.15rem; color: var(--text-light); margin-bottom: 2.5rem; max-width: 550px; }
-    .hero-img { width: 100%; border-radius: 30px; box-shadow: 40px 40px 0 rgba(30, 58, 138, 0.05); }
+    h1 { font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; color: var(--dark); letter-spacing: -1px; }
+    .lead { font-size: 1.1rem; color: var(--text-light); margin-bottom: 2.5rem; max-width: 550px; }
+    .hero-img { width: 100%; border-radius: 20px; box-shadow: 20px 20px 0 rgba(30, 58, 138, 0.05); object-fit: cover; }
 
     /* --- Stats Bar --- */
-    .stats-bar { background: var(--dark); padding: 60px 0; color: white; }
-    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: center; }
-    .stat-item h3 { font-size: 2.5rem; color: var(--accent); margin-bottom: 5px; font-weight: 800; }
-    .stat-item p { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; }
+    .stats-bar { background: var(--dark); padding: 50px 0; color: white; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+    .stat-item h3 { font-size: 2rem; color: var(--accent); margin-bottom: 5px; font-weight: 800; }
+    .stat-item p { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; }
 
     /* --- Content Sections --- */
-    .section { padding: 100px 0; }
-    .section-head { text-align: center; max-width: 700px; margin: 0 auto 60px; }
-    .section-head h2 { font-size: 2.5rem; font-weight: 800; color: var(--dark); margin-bottom: 15px; }
+    .section { padding: 80px 0; }
+    .section-head { text-align: center; max-width: 700px; margin: 0 auto 50px; }
+    .section-head h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; color: var(--dark); margin-bottom: 15px; }
 
     /* --- Cards Grid --- */
     .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
@@ -73,10 +77,9 @@
     
     .icon-box { width: 100%; height: 200px; margin-bottom: 25px; overflow: hidden; }
     .icon-box img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
-    .card:hover .icon-box img { transform: scale(1.1); }
     
-    .card h3, .card p { padding: 0 35px; }
-    .card h3 { margin-bottom: 15px; font-size: 1.4rem; color: var(--dark); }
+    .card h3, .card p { padding: 0 30px; }
+    .card h3 { margin-bottom: 15px; font-size: 1.3rem; color: var(--dark); }
 
     /* --- Workflow --- */
     .workflow-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; }
@@ -86,24 +89,15 @@
     .step p { font-size: 0.85rem; color: var(--text-light); }
 
     /* --- CTA Section --- */
-    .cta-container { padding: 60px 0 100px; }
-    .cta { background: var(--primary); padding: 80px 40px; color: white; text-align: center; border-radius: 40px; }
-    .cta h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 20px; font-weight: 800; }
-    .cta p { margin-bottom: 35px; opacity: 0.9; font-size: 1.1rem; }
+    .cta-container { padding: 40px 0 80px; }
+    .cta { background: var(--primary); padding: 60px 24px; color: white; text-align: center; border-radius: 30px; }
+    .cta h2 { font-size: clamp(1.6rem, 4vw, 2.8rem); margin-bottom: 20px; font-weight: 800; }
+    .cta p { margin-bottom: 35px; opacity: 0.9; font-size: 1rem; }
 
     /* --- Footer Styling --- */
-    .site-footer { background: var(--footer-bg); color: #94a3b8; padding: 100px 0 0; border-top: 4px solid var(--accent); }
-    .footer-main { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 80px; }
-
-    /* --- UBAH BAGIAN INI SAJA --- */
-    .footer-brand-info img { 
-      max-height: 80px; 
-      width: auto; 
-      margin-bottom: 25px;
-      /* Filter dihapus agar warna asli logo muncul (jika logonya memang ada warna putihnya) */
-    }
-    /* -------------------------- */
-
+    .site-footer { background: var(--footer-bg); color: #94a3b8; padding: 80px 0 0; border-top: 4px solid var(--accent); }
+    .footer-main { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 60px; }
+    .footer-brand-info img { max-height: 80px; width: auto; margin-bottom: 25px; }
     .footer-brand-info p { font-size: 0.95rem; line-height: 1.8; max-width: 320px; }
     .footer-title { color: #ffffff; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; margin-bottom: 30px; position: relative; }
     .footer-title::after { content: ''; position: absolute; left: 0; bottom: -10px; width: 30px; height: 2px; background: var(--accent); }
@@ -115,20 +109,45 @@
     .social-wrapper { margin-top: 25px; display: flex; gap: 15px; }
     .social-btn { width: 40px; height: 40px; background: rgba(255,255,255,0.05); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; transition: var(--transition); }
     .social-btn svg { width: 20px; height: 20px; fill: currentColor; }
-    .social-btn:hover { background: var(--accent); transform: translateY(-5px); }
 
     .footer-bottom { background: #070b16; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.05); }
     .bottom-inner { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
     .scroll-top { background: none; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 8px 18px; border-radius: 50px; cursor: pointer; font-size: 0.7rem; font-weight: 700; transition: var(--transition); }
-    .scroll-top:hover { background: #fff; color: var(--dark); }
 
+    /* --- RESPONSIVE MOBILE FIXES --- */
     @media (max-width: 992px) {
-      .footer-main { grid-template-columns: 1fr; gap: 40px; }
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-img { margin-top: 40px; }
-      .stats-grid, .workflow-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
-      .site-nav { position: fixed; top: 72px; left: -100%; width: 100%; height: auto; background: white; flex-direction: column; padding: 40px; transition: 0.4s; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+      .menu-toggle { display: block; }
+      .site-nav { 
+        position: fixed; top: 72px; left: -100%; width: 100%; height: calc(100vh - 72px); 
+        background: white; flex-direction: column; padding: 40px 24px; transition: 0.4s; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1); align-items: flex-start; z-index: 1000;
+      }
       .site-nav.active { left: 0; }
+      .site-nav .btn { width: 100%; margin-top: 20px; }
+      
+      .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+      .hero-copy { order: 1; }
+      .hero-media { order: 2; }
+      .lead { margin-left: auto; margin-right: auto; }
+      .hero-actions { display: flex; flex-direction: column; gap: 12px; }
+      .hero-actions .btn { width: 100%; margin: 0 !important; }
+      .hero-img { box-shadow: 10px 10px 0 rgba(30, 58, 138, 0.05); }
+
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .workflow-grid { grid-template-columns: 1fr; gap: 30px; }
+      
+      .footer-main { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+      .footer-brand-info p { max-width: 100%; }
+      .footer-title::after { left: 50%; transform: translateX(-50%); }
+      .footer-links a { margin: 0 auto 15px; }
+      .social-wrapper { justify-content: center; }
+      .bottom-inner { flex-direction: column; gap: 20px; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .stats-grid { grid-template-columns: 1fr; }
+      .brand-name { font-size: 0.9rem; }
+      .brand-sub { font-size: 0.55rem; }
     }
   </style>
 </head>
@@ -143,6 +162,13 @@
           <span class="brand-sub">Digital Evolution Partner</span>
         </div>
       </a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <nav class="site-nav" id="navMenu">
         <a class="nav-link active" href="index.html">Home</a>
         <a class="nav-link" href="about.html">About</a>
@@ -159,7 +185,7 @@
         <div class="hero-copy">
           <span class="kicker">Accelerate Your Digital Presence</span>
           <h1>Membangun Ekosistem Digital Berkelanjutan.</h1>
-          <p class="lead">Kami adalah mitra strategis dalam pengembangan software kustom, aplikasi mobile, dan transformasi infrastruktur IT yang berfokus pada efisiensi bisnis.</p>
+          <p class="lead">Kami adalah mitra strategis dalam pengembangan software kustom, aplikasi mobile, dan transformasi infrastruktur IT.</p>
           <div class="hero-actions">
             <a href="contact.html" class="btn btn-primary">Konsultasi Gratis</a>
             <a href="products.html" class="btn btn-ghost" style="margin-left: 10px;">Lihat Produk Kami</a>
@@ -173,10 +199,10 @@
 
     <section class="stats-bar">
       <div class="container stats-grid">
-        <div class="stat-item"><h3>150+</h3><p>Projects Delivered</p></div>
-        <div class="stat-item"><h3>60+</h3><p>Happy Clients</p></div>
-        <div class="stat-item"><h3>12+</h3><p>Digital Products</p></div>
-        <div class="stat-item"><h3>99%</h3><p>Client Satisfaction</p></div>
+        <div class="stat-item"><h3>150+</h3><p>Projects</p></div>
+        <div class="stat-item"><h3>60+</h3><p>Clients</p></div>
+        <div class="stat-item"><h3>12+</h3><p>Products</p></div>
+        <div class="stat-item"><h3>99%</h3><p>Satisfaction</p></div>
       </div>
     </section>
 
@@ -185,38 +211,23 @@
         <div class="section-head">
           <span class="kicker">Our Expertise</span>
           <h2>Solusi IT Terintegrasi</h2>
-          <p>Mulai dari startup hingga korporasi, kami memberikan keunggulan kompetitif melalui teknologi terbaru.</p>
+          <p>Mulai dari startup hingga korporasi, kami memberikan keunggulan kompetitif.</p>
         </div>
         <div class="grid-3">
           <div class="card">
             <div class="icon-box"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Software Dev"></div>
             <h3>Custom Development</h3>
-            <p>Sistem internal, ERP, dan CRM yang disesuaikan dengan alur kerja spesifik perusahaan Anda.</p>
+            <p>Sistem internal, ERP, dan CRM yang disesuaikan dengan alur kerja Anda.</p>
           </div>
           <div class="card">
             <div class="icon-box"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80" alt="Mobile Dev"></div>
             <h3>Mobile First App</h3>
-            <p>Pengembangan aplikasi native & hybrid (iOS/Android) dengan performa tinggi dan desain intuitif.</p>
-          </div>
-          <div class="card">
-            <div class="icon-box"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Growth"></div>
-            <h3>Digital Growth</h3>
-            <p>Optimasi trafik dan konversi melalui SEO, manajemen konten, dan strategi marketing berbasis data.</p>
+            <p>Pengembangan aplikasi native & hybrid dengan performa tinggi.</p>
           </div>
           <div class="card">
             <div class="icon-box"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Cloud"></div>
             <h3>Cloud & DevOps</h3>
-            <p>Arsitektur server yang aman dan skalabel untuk menjamin stabilitas sistem Anda setiap saat.</p>
-          </div>
-          <div class="card">
-            <div class="icon-box"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Security"></div>
-            <h3>Security Audit</h3>
-            <p>Perlindungan data menyeluruh terhadap ancaman siber untuk menjaga integritas aset digital.</p>
-          </div>
-          <div class="card">
-            <div class="icon-box"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Data"></div>
-            <h3>Business Intel</h3>
-            <p>Visualisasi data yang akurat untuk membantu Anda mengambil keputusan bisnis secara cepat.</p>
+            <p>Arsitektur server yang aman dan skalabel untuk stabilitas sistem.</p>
           </div>
         </div>
       </div>
@@ -231,23 +242,23 @@
         <div class="workflow-grid">
           <div class="step">
             <div class="step-num">1</div>
-            <h4>Discovery & Planning</h4>
-            <p>Konsultasi strategis untuk memetakan visi bisnis dan roadmap teknologi yang paling efisien.</p>
+            <h4>Discovery</h4>
+            <p>Konsultasi strategis memetakan visi bisnis.</p>
           </div>
           <div class="step">
             <div class="step-num">2</div>
-            <h4>Modern UI/UX Design</h4>
-            <p>Perancangan antarmuka intuitif yang fokus pada pengalaman pengguna dan estetika modern.</p>
+            <h4>Design</h4>
+            <p>Perancangan UI/UX yang fokus pada user.</p>
           </div>
           <div class="step">
             <div class="step-num">3</div>
-            <h4>Agile Development</h4>
-            <p>Proses coding standar tinggi dengan iterasi cepat untuk memastikan sistem yang tangguh.</p>
+            <h4>Develop</h4>
+            <p>Proses coding standar tinggi dan iteratif.</p>
           </div>
           <div class="step">
             <div class="step-num">4</div>
-            <h4>QA & Deployment</h4>
-            <p>Pengujian ketat dan peluncuran sistem ke lingkungan produksi dengan dukungan penuh.</p>
+            <h4>Deploy</h4>
+            <p>Pengujian ketat dan peluncuran sistem.</p>
           </div>
         </div>
       </div>
@@ -256,7 +267,7 @@
     <section class="container cta-container">
       <div class="cta">
         <h2>Siap Mewujudkan Ide Anda?</h2>
-        <p>Konsultasikan kebutuhan teknologi Anda dengan tim ahli kami secara gratis.</p>
+        <p>Konsultasikan kebutuhan teknologi Anda dengan tim ahli kami.</p>
         <a href="contact.html" class="btn" style="background: white; color: var(--primary);">Hubungi Kami Sekarang</a>
       </div>
     </section>
@@ -266,48 +277,61 @@
     <div class="container">
       <div class="footer-main">
         <div class="footer-brand-info">
-          <p>Membangun masa depan digital dengan sinergi teknologi yang tepat guna dan berkelanjutan untuk kemajuan bisnis Anda.</p>
+          <p>Membangun masa depan digital dengan sinergi teknologi yang tepat guna untuk bisnis Anda.</p>
           <div class="social-wrapper">
-            <a href="https://www.linkedin.com/company/idemu-sistem-sinergi" class="social-btn" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/idemusistemsinergi" class="social-btn" aria-label="Instagram">
-              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
+            <a href="https://www.linkedin.com/company/idemu-sistem-sinergi" class="social-btn"><svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            <a href="https://www.instagram.com/idemusistemsinergi" class="social-btn"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
           </div>
         </div>
 
         <div class="footer-links">
           <h4 class="footer-title">Perusahaan</h4>
-          <a href="index.html">Beranda</a>
-          <a href="about.html">Tentang Kami</a>
-          <a href="services.html">Layanan</a>
-          <a href="products.html">Produk Digital</a>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="products.html">Products</a>
+          <a href="contact.html">Contact</a>
         </div>
 
         <div class="footer-contact">
           <h4 class="footer-title">Hubungi Kami</h4>
           <b>Alamat Kantor</b>
-          <span>Menara Cakrawala Lt 12, Jl. M.H. Thamrin No.9, Jakarta Pusat.</span>
-          <b>Email & Telepon</b>
+          <span>Menara Cakrawala Lt 12, Jakarta Pusat.</span>
+          <b>Email</b>
           <span>info@idemusistemsinergi.com</span>
-          <span>+62 21 3983 3333</span>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div class="container bottom-inner">
-        <p>&copy; <span id="year"></span> PT Idemu Sistem Sinergi. Seluruh Hak Cipta Dilindungi.</p>
-        <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-          ↑ KEMBALI KE ATAS
-        </button>
+        <p>&copy; <span id="year"></span> PT Idemu Sistem Sinergi.</p>
+        <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ Kembali Ke Atas</button>
       </div>
     </div>
   </footer>
 
   <script>
+    // Update Tahun
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Toggle Menu Mobile
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      // Animasi hamburger (opsional)
+      const spans = menuToggle.querySelectorAll('span');
+      spans.forEach(span => span.classList.toggle('open'));
+    });
+
+    // Tutup menu saat link diklik (untuk mobile)
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+      });
+    });
   </script>
 </body>
 </html>
