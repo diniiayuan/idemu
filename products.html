@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
-  <title>Services | PT Idemu Sistem Sinergi</title>
+  <title>Our Products | PT Idemu Sistem Sinergi</title>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
@@ -26,7 +26,7 @@
     body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-    /* --- Header & Navigation --- */
+    /* --- Header & Navigation (Identik) --- */
     .site-header { padding: 15px 0; position: sticky; top: 0; background: rgba(255,255,255,0.95); z-index: 1100; border-bottom: 1px solid var(--border); backdrop-filter: blur(10px); }
     .header-inner { display: flex; justify-content: space-between; align-items: center; }
     .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
@@ -34,88 +34,67 @@
     .brand-text { display: flex; flex-direction: column; }
     .brand-name { font-weight: 800; font-size: 1.1rem; color: var(--primary); line-height: 1; letter-spacing: -0.5px; }
     .brand-sub { font-size: 0.65rem; color: var(--text-light); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
-    
-    .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 5px; }
-    .menu-toggle span { display: block; width: 25px; height: 3px; background: var(--primary); margin: 5px 0; transition: 0.3s; }
-
     .site-nav { display: flex; align-items: center; gap: 25px; }
     .nav-link { font-weight: 600; font-size: 0.9rem; color: var(--text-light); text-decoration: none; transition: var(--transition); }
     .nav-link:hover, .nav-link.active { color: var(--primary); }
-    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 28px; font-weight: 700; border-radius: 8px; cursor: pointer; border: none; transition: var(--transition); text-decoration: none; gap: 8px; font-size: 0.9rem; }
+    .btn { display: inline-flex; align-items: center; padding: 12px 28px; font-weight: 700; border-radius: 8px; cursor: pointer; border: none; transition: var(--transition); text-decoration: none; gap: 8px; font-size: 0.9rem; }
     .btn-primary { background: var(--primary); color: var(--white); }
 
     /* --- Page Hero --- */
-    .page-hero { padding: clamp(60px, 10vw, 120px) 0; background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%); position: relative; border-bottom: 1px solid var(--border); text-align: center; }
+    .page-hero { padding: clamp(80px, 10vw, 120px) 0; background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%); position: relative; border-bottom: 1px solid var(--border); text-align: center; }
     .kicker { text-transform: uppercase; letter-spacing: 2px; font-weight: 800; color: var(--accent); font-size: 0.75rem; margin-bottom: 1.5rem; display: block; }
-    h1 { font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 800; color: var(--dark); letter-spacing: -1px; line-height: 1.2; margin-bottom: 25px; margin-left: auto; margin-right: auto; max-width: 900px; }
-    .hero-lead { max-width: 750px; font-size: 1.1rem; color: var(--text-light); line-height: 1.7; margin-left: auto; margin-right: auto; }
+    h1 { font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 800; color: var(--dark); letter-spacing: -2px; line-height: 1.2; margin-bottom: 25px; margin-left: auto; margin-right: auto; max-width: 900px; }
+    .hero-lead { max-width: 750px; font-size: 1.15rem; color: var(--text-light); line-height: 1.7; margin-left: auto; margin-right: auto; }
 
-    /* --- Section Styling --- */
-    .section { padding: 80px 0; }
-    .vimi-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
-    .vimi-card { padding: 30px; background: var(--white); border: 1px solid var(--border); border-radius: 30px; transition: var(--transition); overflow: hidden; display: flex; flex-direction: column; }
-    .vimi-card:hover { border-color: var(--accent); transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+    /* --- Product Grid --- */
+    .section { padding: 100px 0; }
+    .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
+    .product-card { background: var(--white); border: 1px solid var(--border); border-radius: 30px; overflow: hidden; transition: var(--transition); display: flex; flex-direction: column; }
+    .product-card:hover { border-color: var(--accent); transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
     
-    .service-img { width: 100%; height: 200px; object-fit: cover; border-radius: 20px; margin-bottom: 25px; }
+    .product-img { width: 100%; height: 220px; object-fit: cover; }
+    .product-content { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
+    .product-tag { display: inline-block; padding: 5px 12px; background: #eff6ff; color: var(--accent); border-radius: 50px; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; align-self: flex-start; }
     
-    .vimi-card h3 { font-size: 1.4rem; font-weight: 800; color: var(--primary); margin-bottom: 15px; }
-    .vimi-card p { font-size: 0.95rem; color: var(--text-light); margin-bottom: 20px; flex-grow: 1; }
+    .product-card h3 { font-size: 1.4rem; font-weight: 800; color: var(--primary); margin-bottom: 12px; }
+    .product-card p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px; flex-grow: 1; }
     
-    .list-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; font-weight: 600; color: var(--dark); font-size: 0.85rem; text-align: left; }
-    .list-item::before { content: '✓'; color: var(--accent); font-weight: 900; }
+    .feature-points { display: grid; grid-template-columns: 1fr; gap: 8px; margin-bottom: 25px; }
+    .point { font-size: 0.8rem; font-weight: 600; color: var(--dark); display: flex; align-items: center; gap: 8px; }
+    .point::before { content: '✓'; color: var(--accent); font-weight: 900; }
 
-    .full-width-section { background: var(--bg-light); border-radius: 40px; padding: 60px 24px; margin-top: 50px; text-align: center; }
-
-    /* --- Footer --- */
+    /* --- Footer (REVISI IKON & LOGO) --- */
     .site-footer { background: var(--footer-bg); color: #94a3b8; padding: 100px 0 0; border-top: 4px solid var(--accent); }
     .footer-main { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 80px; }
+    
+    /* Ukuran Logo Footer diperbaiki */
+    .footer-brand-info img { height: 50px; width: auto; object-fit: contain; margin-bottom: 25px; display: block; }
     .footer-brand-info p { font-size: 0.95rem; line-height: 1.8; max-width: 320px; }
+    
     .footer-title { color: #ffffff; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; margin-bottom: 30px; position: relative; }
     .footer-title::after { content: ''; position: absolute; left: 0; bottom: -10px; width: 30px; height: 2px; background: var(--accent); }
     .footer-links a { display: block; color: #94a3b8; text-decoration: none; margin-bottom: 15px; font-size: 0.95rem; transition: var(--transition); width: fit-content; }
     .footer-links a:hover { color: var(--white); transform: translateX(8px); }
     .footer-contact b { color: #fff; display: block; font-size: 0.9rem; margin-bottom: 5px; margin-top: 15px; }
-    .footer-contact span { display: block; }
+    .footer-contact span { font-size: 0.9rem; display: block; line-height: 1.6; }
+
+    /* Perbaikan Ukuran Ikon Sosial Media */
     .social-wrapper { margin-top: 25px; display: flex; gap: 15px; }
     .social-btn { width: 40px; height: 40px; background: rgba(255,255,255,0.05); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; transition: var(--transition); }
     .social-btn svg { width: 20px; height: 20px; fill: currentColor; }
+    .social-btn:hover { background: var(--accent); transform: translateY(-5px); }
+
     .footer-bottom { background: #070b16; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.05); }
     .bottom-inner { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
     .scroll-top { background: none; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 8px 18px; border-radius: 50px; cursor: pointer; font-size: 0.7rem; font-weight: 700; transition: var(--transition); }
+    .scroll-top:hover { background: #fff; color: var(--dark); }
 
-    /* --- RESPONSIVE OPTIMIZATION --- */
     @media (max-width: 992px) {
-      .menu-toggle { display: block; }
-      .site-nav { 
-        position: fixed; top: 72px; left: -100%; width: 100%; height: calc(100vh - 72px); 
-        background: white; flex-direction: column; padding: 40px 24px; transition: 0.4s; 
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1); align-items: flex-start; z-index: 1000;
-      }
-      .site-nav.active { left: 0; }
-      .site-nav .btn { width: 100%; margin-top: 20px; }
-      .vimi-container { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-      .footer-main { grid-template-columns: 1fr; gap: 40px; }
-      .bottom-inner { flex-direction: column; gap: 20px; text-align: center; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-main { grid-template-columns: 1fr; }
     }
-
     @media (max-width: 768px) {
-      .section { padding: 60px 0; }
-      .page-hero { padding: 80px 0 60px; }
-      h1 { font-size: 2.2rem; line-height: 1.3; }
-      .hero-lead { font-size: 1rem; }
-      .vimi-card { padding: 24px; border-radius: 24px; }
-    }
-
-    @media (max-width: 600px) {
-      .container { padding: 0 20px; }
-      .vimi-container { grid-template-columns: 1fr; gap: 25px; }
-      h1 { font-size: 1.8rem; }
-      .brand-name { font-size: 1rem; }
-      .full-width-section { padding: 40px 20px; border-radius: 30px; }
-      .full-width-section h2 { font-size: 1.5rem; line-height: 1.4; }
-      .footer-main { text-align: left; }
-      .social-wrapper { justify-content: flex-start; }
-      .site-footer { padding-top: 60px; }
+      .product-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -130,18 +109,11 @@
           <span class="brand-sub">Digital Evolution Partner</span>
         </div>
       </a>
-      
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav class="site-nav" id="navMenu">
+      <nav class="site-nav">
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link" href="about.html">About</a>
-        <a class="nav-link active" href="services.html">Services</a>
-        <a class="nav-link" href="products.html">Products</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link active" href="products.html">Products</a>
         <a class="btn btn-primary" href="contact.html">Work With Us</a>
       </nav>
     </div>
@@ -150,76 +122,102 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <span class="kicker">Expertise & Solutions</span>
-        <h1>Solusi Digital Terpadu untuk <br>Transformasi Bisnis Anda.</h1>
-        <p class="hero-lead">Kami menghadirkan layanan teknologi inovatif yang dirancang untuk meningkatkan visibilitas brand, efisiensi operasional, dan pertumbuhan pasar digital.</p>
+        <span class="kicker">Digital Products</span>
+        <h1>Solusi Software Siap Pakai <br>Untuk Berbagai Sektor.</h1>
+        <p class="hero-lead">Kami menghadirkan produk digital inovatif yang dirancang khusus untuk mempermudah operasional dan manajemen di bidang pendidikan serta bisnis.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="vimi-container">
-          <div class="vimi-card">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Digital Marketing" class="service-img">
-            <h3>Digital Marketing</h3>
-            <p>Perluas jangkauan brand Anda melalui strategi pemasaran digital yang terukur dan efektif.</p>
-            <div class="list-item">Search Engine Optimization (SEO)</div>
-            <div class="list-item">Social Media Management</div>
-            <div class="list-item">Paid Advertising (Ads)</div>
+        <div class="product-grid">
+          
+          <div class="product-card">
+            <img src="asset/mythafidz.png" alt="My Tahfidz" class="product-img">
+            <div class="product-content">
+              <span class="product-tag">Education</span>
+              <h3>My Tahfidz</h3>
+              <p>Platform monitoring hafalan Al-Qur'an digital yang memudahkan guru, murid, dan orang tua memantau progres secara real-time.</p>
+              <div class="feature-points">
+                <div class="point">Laporan Progres Harian</div>
+                <div class="point">Dashboard Wali Santri</div>
+                <div class="point">Sistem Penilaian Mutqin</div>
+              </div>
+            
+            </div>
           </div>
 
-          <div class="vimi-card">
-            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80" alt="Mobile App" class="service-img">
-            <h3>Mobile App Development</h3>
-            <p>Pengembangan aplikasi mobile inovatif yang responsif untuk platform Android dan iOS.</p>
-            <div class="list-item">Native & Hybrid Apps</div>
-            <div class="list-item">High-Performance Coding</div>
-            <div class="list-item">App Store Optimization</div>
+          <div class="product-card">
+            <img src="asset/mythafidz.png" alt="My English" class="product-img">
+            <div class="product-content">
+              <span class="product-tag">Education</span>
+              <h3>My English</h3>
+              <p>Sistem pembelajaran bahasa Inggris interaktif yang mengombinasikan kurikulum modern dengan pelacakan kemampuan bahasa secara mendalam.</p>
+              <div class="feature-points">
+                <div class="point">Vocabulary Tracker</div>
+                <div class="point">Interactive Quiz</div>
+                <div class="point">Progress Assessment</div>
+              </div>
+             
+            </div>
           </div>
 
-          <div class="vimi-card">
-            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80" alt="Website" class="service-img">
-            <h3>Website Development</h3>
-            <p>Membangun platform web modern yang cepat, aman, dan sepenuhnya responsif.</p>
-            <div class="list-item">Custom Web Solutions</div>
-            <div class="list-item">E-Commerce Development</div>
-            <div class="list-item">Corporate Branding Web</div>
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Idemu ERP" class="product-img">
+            <div class="product-content">
+              <span class="product-tag">Business</span>
+              <h3>Idemu ERP Core</h3>
+              <p>Manajemen sumber daya perusahaan terpadu untuk efisiensi keuangan, stok, dan HR dalam satu platform cloud.</p>
+              <div class="feature-points">
+                <div class="point">Cloud Integration</div>
+                <div class="point">Financial Reporting</div>
+                <div class="point">Inventory Management</div>
+              </div>
+             </div>
           </div>
 
-          <div class="vimi-card">
-            <img src="https://i.pinimg.com/736x/58/da/10/58da1028158d87184cb237204f98f1f2.jpg" alt="UI/UX" class="service-img">
-            <h3>UI/UX Design</h3>
-            <p>Merancang antarmuka pengguna yang intuitif untuk pengalaman navigasi yang lebih baik.</p>
-            <div class="list-item">User Research & Persona</div>
-            <div class="list-item">Wireframing & Prototyping</div>
-            <div class="list-item">Interactive Interface Design</div>
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Idemu POS" class="product-img">
+            <div class="product-content">
+              <span class="product-tag">Retail</span>
+              <h3>Idemu POS Smart</h3>
+              <p>Sistem kasir digital yang memudahkan transaksi harian dengan integrasi pembayaran QRIS dan analitik penjualan.</p>
+              <div class="feature-points">
+                <div class="point">QRIS Ready</div>
+                <div class="point">Offline Mode</div>
+                <div class="point">Sales Analytic</div>
+              </div>
+             </div>
           </div>
 
-          <div class="vimi-card">
-            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" alt="SEO Content" class="service-img">
-            <h3>SEO & Content Expert</h3>
-            <p>Produksi konten berkualitas tinggi yang dioptimasi untuk meningkatkan peringkat di Google.</p>
-            <div class="list-item">SEO-Friendly Article Writing</div>
-            <div class="list-item">Keyword Research & Strategy</div>
-            <div class="list-item">Content Marketing Audit</div>
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Sinergi Ads" class="product-img">
+            <div class="product-content">
+              <span class="product-tag">Marketing</span>
+              <h3>Sinergi Ads Tracker</h3>
+              <p>Platform monitoring iklan digital lintas channel (FB, IG, Google) untuk memaksimalkan ROI pemasaran Anda.</p>
+              <div class="feature-points">
+                <div class="point">Cross-Platform Sync</div>
+                <div class="point">Budget Monitoring</div>
+                <div class="point">Auto Report</div>
+              </div>
+            </div>
           </div>
 
-          <div class="vimi-card">
-            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80" alt="Consulting" class="service-img">
-            <h3>IT Consulting & Support</h3>
-            <p>Saran ahli dan dukungan teknis berkelanjutan untuk menjaga stabilitas infrastruktur IT Anda.</p>
-            <div class="list-item">Strategic IT Planning</div>
-            <div class="list-item">Reliable Tech Support</div>
-            <div class="list-item">System Architecture Advice</div>
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Guard Shield" class="product-img">
+            <div class="product-content">
+              <span class="product-tag">Security</span>
+              <h3>Idemu Guard Shield</h3>
+              <p>Infrastruktur keamanan data tingkat tinggi untuk menjaga aset digital perusahaan dari serangan siber eksternal.</p>
+              <div class="feature-points">
+                <div class="point">Encrypted Database</div>
+                <div class="point">Threat Detection</div>
+                <div class="point">24/7 Shield</div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="full-width-section">
-          <span class="kicker">Get in Touch</span>
-          <h2>Konsultasikan Kebutuhan Teknologi Anda Sekarang.</h2>
-          <p class="hero-lead">Tim ahli kami siap membantu Anda memilih solusi yang paling sesuai dengan visi dan anggaran bisnis Anda.</p>
-          <br>
-          <a href="contact.html" class="btn btn-primary">Mulai Konsultasi Gratis</a>
         </div>
       </div>
     </section>
@@ -229,6 +227,7 @@
     <div class="container">
       <div class="footer-main">
         <div class="footer-brand-info">
+            
           <p>Membangun masa depan digital dengan sinergi teknologi yang tepat guna dan berkelanjutan untuk kemajuan bisnis Anda.</p>
           <div class="social-wrapper">
             <a href="https://www.linkedin.com/company/idemu-sistem-sinergi" class="social-btn" aria-label="LinkedIn">
@@ -242,11 +241,10 @@
 
         <div class="footer-links">
           <h4 class="footer-title">Perusahaan</h4>
-          <a href="index.html">Home</a>
-          <a href="about.html">About Us</a>
-          <a href="services.html">Services</a>
-          <a href="products.html">Products</a>
-          <a href="contact.html">Contact</a>  
+          <a href="index.html">Beranda</a>
+          <a href="about.html">Tentang Kami</a>
+          <a href="services.html">Layanan</a>
+          <a href="products.html">Produk Digital</a>
         </div>
 
         <div class="footer-contact">
@@ -264,7 +262,7 @@
       <div class="container bottom-inner">
         <p>&copy; <span id="year"></span> PT Idemu Sistem Sinergi. Seluruh Hak Cipta Dilindungi.</p>
         <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-          ↑ Kembali Ke Atas
+          ↑ KEMBALI KE ATAS
         </button>
       </div>
     </div>
@@ -272,19 +270,6 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
-
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-      });
-    });
   </script>
 </body>
 </html>
