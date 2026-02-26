@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
-    /* --- Root & Reset (Identik) --- */
+    /* --- Root & Reset --- */
     :root {
       --primary: #1e3a8a;
       --accent: #3b82f6;
@@ -26,22 +26,22 @@
     body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-    /* --- Header & Navigation --- */
-    .site-header { padding: 15px 0; position: sticky; top: 0; background: rgba(255,255,255,0.95); z-index: 1100; border-bottom: 1px solid var(--border); backdrop-filter: blur(10px); }
+    /* --- Header & Navigation (Match About) --- */
+    .site-header { padding: 18px 0; position: sticky; top: 0; background: rgba(255,255,255,0.95); z-index: 1100; border-bottom: 1px solid var(--border); backdrop-filter: blur(10px); }
     .header-inner { display: flex; justify-content: space-between; align-items: center; }
-    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-    .brand img { height: 42px; width: auto; }
+    .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .brand img { height: 48px; width: auto; }
     .brand-text { display: flex; flex-direction: column; }
-    .brand-name { font-weight: 800; font-size: 1.1rem; color: var(--primary); line-height: 1; letter-spacing: -0.5px; }
-    .brand-sub { font-size: 0.65rem; color: var(--text-light); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+    .brand-name { font-weight: 800; font-size: 1.15rem; color: var(--primary); line-height: 1; letter-spacing: -0.5px; }
+    .brand-sub { font-size: 0.65rem; color: var(--text-light); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
     
     .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 5px; }
     .menu-toggle span { display: block; width: 25px; height: 3px; background: var(--primary); margin: 5px 0; transition: 0.3s; }
 
-    .site-nav { display: flex; align-items: center; gap: 25px; }
-    .nav-link { font-weight: 600; font-size: 0.9rem; color: var(--text-light); text-decoration: none; transition: var(--transition); }
+    .site-nav { display: flex; align-items: center; gap: 30px; }
+    .nav-link { font-weight: 700; font-size: 0.9rem; color: var(--text-light); text-decoration: none; transition: var(--transition); }
     .nav-link:hover, .nav-link.active { color: var(--primary); }
-    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 28px; font-weight: 700; border-radius: 8px; cursor: pointer; border: none; transition: var(--transition); text-decoration: none; gap: 8px; font-size: 0.9rem; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 28px; font-weight: 700; border-radius: 10px; cursor: pointer; border: none; transition: var(--transition); text-decoration: none; gap: 8px; font-size: 0.9rem; }
     .btn-primary { background: var(--primary); color: var(--white); }
 
     /* --- Page Hero --- */
@@ -66,36 +66,38 @@
 
     .full-width-section { background: var(--bg-light); border-radius: 40px; padding: 60px 24px; margin-top: 50px; text-align: center; }
 
-    /* --- Footer (Updated to Match About) --- */
+    /* --- Footer (Match About) --- */
     .site-footer { background: var(--footer-bg); color: #94a3b8; padding: 100px 0 0; border-top: 4px solid var(--accent); }
-    .footer-main { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 80px; }
-    .footer-brand-info img { height: 60px; width: auto; object-fit: contain; margin-bottom: 25px; display: block; }
-    .footer-brand-info p { font-size: 0.95rem; line-height: 1.8; max-width: 320px; }
+    .footer-main { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 60px; margin-bottom: 80px; }
+    .footer-brand-info img { height: 65px; width: auto; object-fit: contain; margin-bottom: 25px; display: block; }
+    .footer-brand-info p { font-size: 0.95rem; line-height: 1.8; max-width: 340px; }
     .footer-title { color: #ffffff; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; margin-bottom: 30px; position: relative; }
     .footer-title::after { content: ''; position: absolute; left: 0; bottom: -10px; width: 30px; height: 2px; background: var(--accent); }
     .footer-links a { display: block; color: #94a3b8; text-decoration: none; margin-bottom: 15px; font-size: 0.95rem; transition: var(--transition); width: fit-content; }
     .footer-links a:hover { color: var(--white); transform: translateX(8px); }
     .footer-contact b { color: #fff; display: block; font-size: 0.9rem; margin-bottom: 5px; margin-top: 15px; }
-    .footer-contact span { display: block; }
-    .social-wrapper { margin-top: 25px; display: flex; gap: 15px; }
-    .social-btn { width: 40px; height: 40px; background: rgba(255,255,255,0.05); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; transition: var(--transition); }
+    .footer-contact span { display: block; font-size: 0.95rem; }
+    .social-wrapper { margin-top: 30px; display: flex; gap: 15px; }
+    .social-btn { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; transition: var(--transition); border: 1px solid rgba(255,255,255,0.1); }
+    .social-btn:hover { background: var(--accent); border-color: var(--accent); transform: translateY(-3px); }
     .social-btn svg { width: 20px; height: 20px; fill: currentColor; }
     .footer-bottom { background: #070b16; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.05); }
     .bottom-inner { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
-    .scroll-top { background: none; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 8px 18px; border-radius: 50px; cursor: pointer; font-size: 0.7rem; font-weight: 700; transition: var(--transition); }
+    .scroll-top { background: none; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px 20px; border-radius: 50px; cursor: pointer; font-size: 0.75rem; font-weight: 700; transition: var(--transition); }
+    .scroll-top:hover { background: var(--white); color: var(--dark); }
 
     /* --- RESPONSIVE MOBILE --- */
     @media (max-width: 992px) {
       .menu-toggle { display: block; }
       .site-nav { 
-        position: fixed; top: 72px; left: -100%; width: 100%; height: calc(100vh - 72px); 
+        position: fixed; top: 82px; left: -100%; width: 100%; height: calc(100vh - 82px); 
         background: white; flex-direction: column; padding: 40px 24px; transition: 0.4s; 
         box-shadow: 0 10px 30px rgba(0,0,0,0.1); align-items: flex-start; z-index: 1000;
       }
       .site-nav.active { left: 0; }
       .site-nav .btn { width: 100%; margin-top: 20px; }
       .vimi-container { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-      .footer-main { grid-template-columns: 1fr; }
+      .footer-main { grid-template-columns: 1fr; gap: 40px; }
       .bottom-inner { flex-direction: column; gap: 20px; text-align: center; }
     }
 
