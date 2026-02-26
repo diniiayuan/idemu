@@ -66,7 +66,7 @@
 
     .full-width-section { background: var(--bg-light); border-radius: 40px; padding: 60px 24px; margin-top: 50px; text-align: center; }
 
-    /* --- Footer (Sesuai dengan File About) --- */
+    /* --- Footer --- */
     .site-footer { background: var(--footer-bg); color: #94a3b8; padding: 80px 0 0; border-top: 4px solid var(--accent); text-align: left; }
     .footer-main { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 60px; }
     .footer-brand-info p { font-size: 0.95rem; line-height: 1.8; max-width: 320px; }
@@ -82,7 +82,8 @@
     .social-btn:hover { background: var(--accent); transform: translateY(-5px); }
     
     .footer-bottom { background: #070b16; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.05); }
-    .bottom-inner { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
+    /* BAGIAN YANG DIUBAH KE TENGAH */
+    .bottom-inner { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; font-size: 0.85rem; text-align: center; }
     .scroll-top { background: none; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 8px 18px; border-radius: 50px; cursor: pointer; font-size: 0.7rem; font-weight: 700; transition: var(--transition); }
 
     /* --- RESPONSIVE MOBILE --- */
@@ -100,7 +101,6 @@
       .footer-title::after { left: 50%; transform: translateX(-50%); }
       .footer-links a { margin: 0 auto 15px; }
       .social-wrapper { justify-content: center; }
-      .bottom-inner { flex-direction: column; gap: 20px; }
     }
 
     @media (max-width: 600px) {
@@ -219,6 +219,7 @@
     <div class="container">
       <div class="footer-main">
         <div class="footer-brand-info">
+          <img src="asset/logo.png" alt="IDEMU Logo" style="height: 60px; margin-bottom: 25px;">
           <p>Membangun masa depan digital dengan sinergi teknologi yang tepat guna dan berkelanjutan untuk kemajuan bisnis Anda.</p>
           <div class="social-wrapper">
             <a href="https://www.linkedin.com/company/idemu-sistem-sinergi" class="social-btn" aria-label="LinkedIn">
@@ -252,7 +253,7 @@
 
     <div class="footer-bottom">
       <div class="container bottom-inner">
-        <p>&copy; <span id="year"></span> PT Idemu Sistem Sinergi. Seluruh Hak Cipta Dilindungi.</p>
+        <p>&copy; 2026 PT Idemu Sistem Sinergi. Seluruh Hak Cipta Dilindungi.</p>
         <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
           ↑ Kembali Ke Atas
         </button>
@@ -261,8 +262,6 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
 
