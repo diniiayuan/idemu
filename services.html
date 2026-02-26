@@ -66,23 +66,31 @@
 
     .full-width-section { background: var(--bg-light); border-radius: 40px; padding: 60px 24px; margin-top: 50px; text-align: center; }
 
-    /* --- Footer (Match About) --- */
-    .site-footer { background: var(--footer-bg); color: #94a3b8; padding: 100px 0 0; border-top: 4px solid var(--accent); }
-    .footer-main { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 60px; margin-bottom: 80px; }
-    .footer-brand-info img { height: 65px; width: auto; object-fit: contain; margin-bottom: 25px; display: block; }
-    .footer-brand-info p { font-size: 0.95rem; line-height: 1.8; max-width: 340px; }
-    .footer-title { color: #ffffff; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; margin-bottom: 30px; position: relative; }
-    .footer-title::after { content: ''; position: absolute; left: 0; bottom: -10px; width: 30px; height: 2px; background: var(--accent); }
-    .footer-links a { display: block; color: #94a3b8; text-decoration: none; margin-bottom: 15px; font-size: 0.95rem; transition: var(--transition); width: fit-content; }
-    .footer-links a:hover { color: var(--white); transform: translateX(8px); }
-    .footer-contact b { color: #fff; display: block; font-size: 0.9rem; margin-bottom: 5px; margin-top: 15px; }
+    /* --- Footer (Centered Layout) --- */
+    .site-footer { background: var(--footer-bg); color: #94a3b8; padding: 80px 0 0; border-top: 4px solid var(--accent); text-align: center; }
+    .footer-main { display: flex; flex-direction: column; align-items: center; gap: 40px; margin-bottom: 60px; }
+    .footer-brand-info { max-width: 500px; display: flex; flex-direction: column; align-items: center; }
+    .footer-brand-info img { height: 65px; width: auto; object-fit: contain; margin-bottom: 20px; }
+    .footer-brand-info p { font-size: 0.95rem; line-height: 1.8; margin: 0 auto; }
+    
+    .footer-title { color: #ffffff; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; margin-bottom: 20px; position: relative; display: inline-block; }
+    .footer-title::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: -8px; width: 30px; height: 2px; background: var(--accent); }
+    
+    .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+    .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.95rem; transition: var(--transition); }
+    .footer-links a:hover { color: var(--white); }
+    
+    .footer-contact { max-width: 400px; }
+    .footer-contact b { color: #fff; display: block; font-size: 0.9rem; margin: 15px 0 5px; }
     .footer-contact span { display: block; font-size: 0.95rem; }
-    .social-wrapper { margin-top: 30px; display: flex; gap: 15px; }
+
+    .social-wrapper { margin-top: 25px; display: flex; gap: 15px; justify-content: center; }
     .social-btn { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; transition: var(--transition); border: 1px solid rgba(255,255,255,0.1); }
     .social-btn:hover { background: var(--accent); border-color: var(--accent); transform: translateY(-3px); }
     .social-btn svg { width: 20px; height: 20px; fill: currentColor; }
+    
     .footer-bottom { background: #070b16; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.05); }
-    .bottom-inner { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
+    .bottom-inner { display: flex; justify-content: center; flex-direction: column; align-items: center; gap: 15px; font-size: 0.85rem; }
     .scroll-top { background: none; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px 20px; border-radius: 50px; cursor: pointer; font-size: 0.75rem; font-weight: 700; transition: var(--transition); }
     .scroll-top:hover { background: var(--white); color: var(--dark); }
 
@@ -97,13 +105,12 @@
       .site-nav.active { left: 0; }
       .site-nav .btn { width: 100%; margin-top: 20px; }
       .vimi-container { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-      .footer-main { grid-template-columns: 1fr; gap: 40px; }
-      .bottom-inner { flex-direction: column; gap: 20px; text-align: center; }
     }
 
     @media (max-width: 600px) {
       .vimi-container { grid-template-columns: 1fr; }
       h1 { font-size: 1.8rem; }
+      .footer-links { gap: 15px; }
     }
   </style>
 </head>
@@ -229,7 +236,6 @@
         </div>
 
         <div class="footer-links">
-          <h4 class="footer-title">Perusahaan</h4>
           <a href="index.html">Home</a>
           <a href="about.html">About Us</a>
           <a href="services.html">Services</a>
@@ -242,8 +248,7 @@
           <b>Alamat Kantor</b>
           <span>Menara Cakrawala Lt 12, Jl. M.H. Thamrin No.9, Jakarta Pusat.</span>
           <b>Email & Telepon</b>
-          <span>info@idemusistemsinergi.com</span>
-          <span>+62 21 3983 3333</span>
+          <span>info@idemusistemsinergi.com | +62 21 3983 3333</span>
         </div>
       </div>
     </div>
